@@ -1,0 +1,29 @@
+name: Build Resume PDF
+
+on:
+  push:
+    paths:
+      - 'Resume.tex'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: resume.tex
+
+      - name: Commit and Push the generated PDF
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add resume.pdf
+          git commit -m "Auto-generate resume PDF" || echo "No changes to commit"
+          git push
