@@ -1,0 +1,201 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.6in}
+\addtolength{\textwidth}{1.2in}
+\addtolength{\topmargin}{-0.5in}
+\addtolength{\textheight}{1.1in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{#1}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+% ============================================================================== %
+% ============================================================================== %
+
+\begin{document}
+
+%-----------HEADER-----------
+\begin{center}
+    \textbf{\Huge \scshape Yi Hahn Pang} \\ \vspace{1pt}
+    \small +65 8835 7353 $|$ 
+    \href{mailto:yihahn.pang@gmail.com}{\underline{yihahn.pang@gmail.com\vphantom{gpy/|}}} $|$ 
+    \href{https://linkedin.com/in/yihahn-pang}{\underline{linkedin.com/in/yihahn-pang\vphantom{gpy/|}}} $|$
+    \href{https://github.com/yihahn-pang}{\underline{github.com/yihahn-pang\vphantom{gpy/|}}} $|$
+    \href{https://yihahn-pang.github.io}{\underline{yihahnpang.com\vphantom{gpy/|}}}
+\end{center}
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Data Analytics Engineer, Operation Intelligence}{Jul 2026 -- Present}
+      {Micron Technology}{}
+      \resumeItemListStart
+        \resumeItem{...}
+        \resumeItem{...}
+        \resumeItem{...}
+        \resumeItem{...}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Data Engineer Intern}{Jan 2026 -- May 2026}
+      {Climate Impact X}{}
+      \resumeItemListStart
+        \resumeItem{Led migration of legacy SQL pipelines to dbt and implemented materialization strategy to optimize Snowflake compute performance, reducing runtime by 86\% (from 66 to 9 mins)}
+        \resumeItem{Developed dbt tests and monitoring dashboards to visualize data pipeline health, flagging 7 major SQL logic errors}
+        \resumeItem{Piloted Microsoft Fabric Data Agent to translate natural language into database queries, optimizing semantic context and capacity cost}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Data Engineer Intern}{Jan 2025 -- Jun 2025}
+      {Climate Impact X $|$ \href{https://github.com/yihahn-pang/resume-files/blob/main/Testimonial_CIX.pdf}{\textit{\underline{Testimonial\vphantom{qy}}}}}{}
+      \resumeItemListStart
+        \resumeItem{Built 18 automated ETL pipelines (Airflow, PySpark, Azure) to ingest multi-source data into Snowflake and MongoDB, saving 10+ manual hours weekly}
+        \resumeItem{Refactored Snowflake schema into medallion architecture to consolidate 40+ views, improving data lineage and fixing schema redundancies}
+        \resumeItem{Engineered 2 CI/CD pipelines (Bash, Azure DevOps) to automate cloud deployments, ensuring environment parity}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Environmental Engineer Intern}{May 2024 -- Aug 2024}
+      {Carbon GPT $|$ \href{https://github.com/yihahn-pang/resume-files/blob/main/Testimonial_CGPT.pdf}{\textit{\underline{Testimonial\vphantom{qy}}}}}{}
+      \resumeItemListStart
+        \resumeItem{Built 4 LLM prototypes (Streamlit, Groq API) to automate tasks, supporting pitches to UOB, CIMB, and Bursa}
+        \resumeItem{Developed ETL pipeline (Python, PostgreSQL) to process 1.5M+ records, optimizing database scalability}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------SKILLS-----------
+\section{Skills}
+ \begin{itemize}[leftmargin=0in, label={}]
+    \small{\item{
+     \textbf{Languages \& Libraries}{: Python (Pandas, NumPy, FastAPI, PyTorch, Scikit-learn), SQL, Java, R} \\
+     \textbf{Data Processing \& Orchestration}{: Spark (PySpark), Airflow, Kafka, dbt} \\
+     \textbf{Data Platforms \& Databases}{: Snowflake, BigQuery, Fabric, PostgreSQL, MongoDB, DuckDB} \\
+     \textbf{Cloud, DevOps \& Analytics}{: GCP, Azure, Docker, Git, CI/CD, Tableau, Power BI} \\
+     \textbf{Certifications}{: \href{https://www.credly.com/badges/bba4abd9-81f5-4ed4-a6aa-f4015365b16c/linked_in_profile}{\underline{AWS Certified Cloud Practitioner\vphantom{qy}}}, \href{https://credentials.databricks.com/a02dda1d-38d4-4603-8807-9d2133eec2f2\#acc.Hrl34Xas}{\underline{Databricks Certified Data Engineer Associate\vphantom{qy}}}}
+    }}
+ \end{itemize}
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+    
+      \resumeProjectHeading
+          {\textbf{Local Snowflake SQL Transpiler} $|$ \emph{DuckDB, SQLGlot} $|$ \href{https://github.com/yihahn-pang/snowflake-project}{\textit{\underline{GitHub\vphantom{qy}}}}}{}
+          \resumeItemListStart
+            \resumeItem{Programmed a local Snowflake SQL execution environment to enable fast, cost-free query testing}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Real-Time Stock Streaming Dashboard} $|$ \emph{Kafka, Docker, Streamlit} $|$ \href{https://github.com/yihahn-pang/kafka-project}{\textit{\underline{GitHub\vphantom{qy}}}}}{}
+          \resumeItemListStart
+            \resumeItem{Created a real-time stock trading simulator to stream and visualize high-frequency market data}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Weather Analytics ELT Pipeline} $|$ \emph{AWS Lambda, S3, Redshift} $|$ \href{https://github.com/yihahn-pang/data-project}{\textit{\underline{GitHub\vphantom{qy}}}}}{}
+          \resumeItemListStart
+            \resumeItem{Engineered a cloud-native ELT pipeline to extract, load, and analyze Singapore weather data}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{SGX Derivatives Data Downloader CLI} $|$ \emph{Python} $|$ \href{https://github.com/yihahn-pang/sgx-project}{\textit{\underline{GitHub\vphantom{qy}}}}}{}
+          \resumeItemListStart
+            \resumeItem{Built a CLI tool to automate SGX derivatives data retrieval with retry, logging, and scheduling support}
+          \resumeItemListEnd
+          
+    \resumeSubHeadingListEnd
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+  
+    \resumeSubheading
+      {Georgia Institute of Technology}{Aug 2026 -- Present}
+      {Master of Science, Computer Science (Computing Systems)}{}
+      \resumeItemListStart
+        \resumeItem{...}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {National University of Singapore}{Aug 2022 -- Jun 2026}
+      {Bachelor of Engineering (Hons), Environmental Engineering and Data Analytics}{}
+      \resumeItemListStart
+        \resumeItem{GPA: 4.46/5.0 (Distinction) $|$ ASEAN Scholar}
+        \resumeItem{Dissertation Project: Physics-Informed Machine Learning (Symbolic Regression) for Rainfall-Runoff Modelling}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-------------------------------------------
+\end{document}
